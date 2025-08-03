@@ -34,4 +34,4 @@ map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
-map("n", "<leader>e", vim.diagnostic.open_float)
+map("n", "<leader>ñ", vim.diagnostic.open_float)
