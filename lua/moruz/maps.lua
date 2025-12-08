@@ -1,8 +1,5 @@
-
-vim.g.mapleader = "ñ"
-
 local function map(mode, lhs, rhs)
-    vim.keymap.set(mode, lhs, rhs, { silent = true })
+	vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
 -- Save
@@ -15,7 +12,7 @@ map("n", "<leader>q", "<CMD>q<CR>")
 map("i", "jk", "<ESC>")
 
 -- NeoTree
-map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+-- map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
 -- New Windows
@@ -34,4 +31,6 @@ map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
-map("n", "<leader>ñ", vim.diagnostic.open_float)
+-- Mover lineas con alt
+map("n", "<A-j>", ":m .-2<CR>==")
+map("n", "<A-k>", ":m .+1<CR>==")

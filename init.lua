@@ -1,4 +1,1 @@
-
-require("moruz.maps")
-require("moruz.settings")
-require("moruz.lazy")
+require("moruz")
