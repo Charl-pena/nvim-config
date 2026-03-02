@@ -2,6 +2,11 @@ local function map(mode, lhs, rhs)
 	vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
+vim.g.mapleader = " "
+
+-- Show Error
+map("n", "<leader>e", vim.diagnostic.open_float)
+
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>")
 
@@ -12,7 +17,7 @@ map("n", "<leader>q", "<CMD>q<CR>")
 map("i", "jk", "<ESC>")
 
 -- NeoTree
--- map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+map("n", "<leader>ñ", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
 -- New Windows
