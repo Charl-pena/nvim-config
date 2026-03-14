@@ -17,7 +17,7 @@ map("n", "<leader>q", "<CMD>q<CR>")
 map("i", "jk", "<ESC>")
 
 -- NeoTree
-map("n", "<leader>ñ", "<CMD>Neotree toggle<CR>")
+-- map("n", "<leader>ñ", "<CMD>Neotree toggle<CR>")
 map("n", "<leader>r", "<CMD>Neotree focus<CR>")
 
 -- New Windows
