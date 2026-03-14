@@ -1,4 +1,4 @@
-local last_width = 35
+local last_width = vim.g.last_width
 
 local function toggle_neotree_remember()
 	-- Si Neo-Tree ya esta abierto. Cerrarlo
