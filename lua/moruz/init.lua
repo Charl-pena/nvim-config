@@ -2,3 +2,51 @@ require("moruz.maps")
 require("moruz.settings")
 require("moruz.lazy-init")
 require("moruz.functions")
+-- local logged_wins = {}
+--
+-- local function log_floats()
+-- 	local wins = vim.api.nvim_list_wins()
+-- 	for _, win_id in ipairs(wins) do
+-- 		local config = vim.api.nvim_win_get_config(win_id)
+-- 		if config.relative ~= "" and not logged_wins[win_id] then
+-- 			local buf_id = vim.api.nvim_win_get_buf(win_id)
+--
+-- 			-- Fetch all buffer-local mappings for this specific float
+-- 			local all_maps = vim.api.nvim_get_all_options and {} or vim.api.nvim_buf_get_keymap(buf_id, "")
+-- 			-- Note: '' as mode gets all modes, but you can also check 'i', 'n', etc.
+--
+-- 			local mapping_details = {}
+-- 			for _, map in ipairs(all_maps) do
+-- 				table.insert(mapping_details, {
+-- 					mode = map.mode,
+-- 					key = map.lhs,
+-- 					description = map.desc or "No description",
+-- 					-- Log either the raw command (rhs) or the Lua function (callback)
+-- 					action = map.rhs ~= "" and map.rhs or (map.callback and "Lua Function" or "Unknown"),
+-- 				})
+-- 			end
+--
+-- 			local log_entry = string.format(
+-- 				"\n[NEW FLOAT DETECTED]\nWindow ID: %d | Buffer ID: %d\nConfig: %s\nAll Local Mappings: %s\n"
+-- 					.. string.rep("-", 40)
+-- 					.. "\n",
+-- 				win_id,
+-- 				buf_id,
+-- 				vim.inspect(config),
+-- 				#mapping_details > 0 and vim.inspect(mapping_details) or "EMPTY (No local mappings)"
+-- 			)
+--
+-- 			local f = io.open("float_trace.log", "a")
+-- 			if f then
+-- 				f:write(log_entry)
+-- 				f:close()
+-- 			end
+--
+-- 			print("Captured " .. #mapping_details .. " mappings for Buf " .. buf_id)
+-- 			logged_wins[win_id] = true
+-- 		end
+-- 	end
+-- end
+--
+-- local timer = vim.loop.new_timer()
+-- timer:start(0, 100, vim.schedule_wrap(log_floats))
