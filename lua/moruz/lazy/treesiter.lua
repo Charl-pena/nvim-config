@@ -27,7 +27,7 @@ return {
 				-- "dockerfile",
 				"gitignore",
 				"c",
-				"rust",
+				-- "rust",
 				"toml",
 			},
 			incremental_selection = {
