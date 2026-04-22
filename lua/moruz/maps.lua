@@ -39,3 +39,12 @@ map("n", "<C-Down>", "<C-w>-")
 -- Mover lineas con alt
 map("n", "<A-j>", ":m .-2<CR>==")
 map("n", "<A-k>", ":m .+1<CR>==")
+
+-- Rust Keymaps --
+map("n", "K", function()
+	vim.cmd.RustLsp({ "hover", "actions" })
+end)
+map("n", "<leader>a", function()
+	vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
+	-- or vim.lsp.buf.codeAction() if you don't want grouping.
+end)
