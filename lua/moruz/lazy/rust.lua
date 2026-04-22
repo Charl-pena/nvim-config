@@ -1,25 +1,11 @@
--- ~/.config/nvim/lua/plugins/rust.lua
 return {
-	-- The powerhouse for Rust
-	-- {
-	-- 	"mrcjkb/rustaceanvim",
-	-- 	version = "^5", -- Recommended for 2026 stability
-	-- 	lazy = false, -- This plugin is already lazy-loaded by filetype
-	-- 	config = function()
-	-- 		vim.g.rustaceanvim = {
-	-- 			server = {
-	-- 				on_attach = function(client, bufnr)
-	-- 					-- Add your keymaps here (e.g., hover actions, code actions)
-	-- 				end,
-	-- 				default_settings = {
-	-- 					["rust-analyzer"] = {
-	-- 						checkOnSave = { command = "clippy" }, -- Use clippy for linting
-	-- 						cargo = { allFeatures = true },
-	-- 					},
-	-- 				},
-	-- 			},
-	-- 		}
-	-- 	end,
-	-- },
-	--
+	{
+		"mrcjkb/rustaceanvim",
+		-- To avoid being surprised by breaking changes,
+		-- I recommend you set a version range
+		version = "^9",
+		-- This plugin implements proper lazy-loading (see :h lua-plugin-lazy).
+		-- No need for lazy.nvim to lazy-load it.
+		lazy = false,
+	},
 }
